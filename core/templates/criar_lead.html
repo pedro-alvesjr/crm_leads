@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Criar Lead</title></head>
+<body>
+    <h1>Criar nova Lead</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{% url 'lista_leads' %}">Voltar Lista</a>
+</body>
+</html>

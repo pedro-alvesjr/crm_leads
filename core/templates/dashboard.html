@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+    <h1>Dashboard</h1>
+    <ul>
+        {% for status, count in contagem.items %}
+            <li>{{ status }}: {{ count }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'lista_leads' %}">Ver Leads</a>
+</body>
+</html>

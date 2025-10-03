@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Lista de Leads</title></head>
+<body>
+    <h1>Lista de Leads</h1>
+    <ul>
+        {% for lead in leads %}
+            <li>{{ lead.nome }} - {{ lead.status }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'criar_lead' %}">Criar nova lead</a>
+    <a href="{% url 'dashboard' %}">Voltar Dashboard</a>
+</body>
+</html>
